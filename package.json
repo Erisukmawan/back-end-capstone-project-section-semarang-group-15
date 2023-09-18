@@ -1,0 +1,16 @@
+{
+  "name": "back-end-capstone-project-section-semarang-group-15",
+  "version": "1.0.0",
+  "description": "Languago",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Group-15_Team-H_Section-Semarang",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {},
+  "keywords": []
+}
