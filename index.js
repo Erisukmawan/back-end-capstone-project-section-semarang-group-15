@@ -3,11 +3,11 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get('/', (request, response) => {
-    response.send('Hello World!');
+    response.send('Halo ini adalah Halaman utama server Languago');
 });
 
-app.get('/hai', (request, response) => {
-    response.send('Hai');
+app.get('/program', (request, response) => {
+    response.send('pogram 1');
 });
 
 app.get('/status', (request, response) => {
