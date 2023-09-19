@@ -11,7 +11,7 @@ app.get('/', (request, response) => {
 });
 
 app.get('/api/program', (request, response) => {
-    const progran = {
+    const program = {
         "Program Status": "All ready"
     };
     response.send(program);
