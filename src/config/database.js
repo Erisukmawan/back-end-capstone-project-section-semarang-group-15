@@ -9,3 +9,4 @@ const connection = mysql.createPool({
 });
 
 module.exports = connection.promise()
+module.exports = connection

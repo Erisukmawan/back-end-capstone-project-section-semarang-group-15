@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 const port = process.env.PORT || 3000;
+const mysql = require('mysql2');
+const connection = require('./src/config/database.js');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
