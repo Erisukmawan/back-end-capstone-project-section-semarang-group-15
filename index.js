@@ -7,7 +7,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', (request, response) => {
-    response.send('Halo ini adalah Halaman utama server Languago');
+    response.send('Halo ini adalah Halaman utama server Languago :)');
 });
 
 app.get('/api/program', (request, response) => {
