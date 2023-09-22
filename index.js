@@ -1,7 +1,12 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-const port = process.env.PORT || 3000;
+require("dotenv").config();
+const port = process.env.PORT;
+const programRoutes = require('./src/routes/program.js');
+const testimoniRoutes = require('./src/routes/testimoni.js');
+const daftarProgramRoutes = require('./src/routes/daftar_program.js');
+const kontakKamiRoutes = require('./src/routes/kontak_kami.js');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -10,46 +15,17 @@ app.get('/', (request, response) => {
     response.send("Hallo Selamat Datang diserver Languago");
 });
 
-app.get('/api/program', (request, response) => {
-    connection.execute('SELECT * FROM program', (err, rows) => {
-        if (err) {
-            response.send({
-                message: 'Gagal Tersambung',
-                data: err
-            })
-        } else {
-            response.send({
-                message: 'Connection Success',
-                data: rows
-            })
-        }
-    })
-});
+app.use('/api/program', programRoutes);
 
-app.get('/api/testimoni', (request, response) => {
-    const testimoni = {
-        "Testimoni Status": "All ready"
-    };
-    response.send(testimoni);
-});
+app.use('/api/testimoni', testimoniRoutes);
 
-app.post('/api/daftar-program', (request, response) => {
-    const daftar = {
-        "Daftar Program Status": "All ready"
-    };
-    response.send(daftar);
-});
+app.use('/api/daftar-program', daftarProgramRoutes);
 
-app.post('/api/kontak-kami', (request, response) => {
-    const kontak = {
-        "Kontak Kami Status": "All ready"
-    };
-    response.send(kontak);
-});
+app.use('/api/kontak-kami', kontakKamiRoutes);
 
 app.get('/status', (request, response) => {
    const status = {
-      "Status": "Running"
+      "Status": "Running on port " + port,
    };
     response.send(status);
 });

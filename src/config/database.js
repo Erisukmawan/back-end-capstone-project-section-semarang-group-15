@@ -1,11 +1,12 @@
 const mysql = require('mysql2');
+require("dotenv").config();
 
 const connection = mysql.createPool({
-    host: 'containers-us-west-71.railway.app',
-    user: 'root',
-    password: '6wL1pmeIRHNmPpGXeJoE',
-    database: 'railway',
-    port: 7050
+    host: process.env.MYSQLHOST,
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDATABASE,
+    port: process.env.MYSQLPORT
 });
 
-module.exports = connection.promise()
+module.exports = connection
