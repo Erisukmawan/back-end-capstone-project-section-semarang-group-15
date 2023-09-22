@@ -12,7 +12,7 @@
 - git pull (untuk yg sudah clone repo ini)
 - ubah .env.example jadi .env
 - npm install -g express mysql2 nodemon dotenv
-- npm run test
+- nademon index (untuk run code)
 ```
 
 <h1>Our Team</h1>
