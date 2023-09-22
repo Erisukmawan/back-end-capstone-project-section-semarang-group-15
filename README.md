@@ -3,7 +3,16 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0wBSnje4)
 
 <h1>Apa Itu Languago</h1>
-<p>Languago adalah platform kurses bahasa inggris dan memberikan solusi pembelajaran bahasa yang mudah diakses, efektif, terjangkau, meningkatkan pemahaman dan wawasan untuk persiapan tes TOEFL. Kami percaya bahwa bahasa tidak boleh menjadi penghalang komunikasi dan setiap orang harus mempunyai kesempatan untuk belajar bahasa baru.</p>
+<p>Languago adalah platform kursus bahasa inggris yang memberikan solusi dari masalah keterbatasan akses belajar bahasa inggris. Program kursus kami sangat mudah diakses, terjangkau, dan membantu peserta kursus meningkatkan pemahaman grammar, kemampuan reading, speaking, writing bahasa inggris serta membantu persiapan tes TOEFL dan IELTS.</p>
+
+<h1>Installation</h1>
+
+```
+- git clone
+- ubah .env.example jadi .env
+- npm install -g express mysql2 nodemon dotenv
+- npm run test
+```
 
 <h1>Our Team</h1>
 <ul>
@@ -24,5 +33,12 @@
 	<li>FAQ - Frequently Asked Question</li>
 </ul>
 
-<h1>Link Github Pages</h1>
-https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-15
+<h1>Link</h1>
+
+- Github Pages : https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-15
+- Railway APIs Main Page: https://languago.up.railway.app/
+- Railway APIs Program : https://languago.up.railway.app/api/program
+- Railway APIs Testimoni : https://languago.up.railway.app/api/testimoni
+- Railway APIs Daftar Program : https://languago.up.railway.app/api/daftar-program
+- Railway APIs Kontak Kami : https://languago.up.railway.app/api/kontak-kami
+- Railway APIs Status : https://languago.up.railway.app/status
