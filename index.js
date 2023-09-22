@@ -7,14 +7,23 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 app.get('/', (request, response) => {
-    response.send('Halo ini adalah Halaman utama server Languago :)');
+    response.send("Hallo Selamat Datang diserver Languago");
 });
 
 app.get('/api/program', (request, response) => {
-    const program = {
-        "Program Status": "All ready"
-    };
-    response.send(program);
+    connection.execute('SELECT * FROM program', (err, rows) => {
+        if (err) {
+            response.send({
+                message: 'Gagal Tersambung',
+                data: err
+            })
+        } else {
+            response.send({
+                message: 'Connection Success',
+                data: rows
+            })
+        }
+    })
 });
 
 app.get('/api/testimoni', (request, response) => {
