@@ -10,8 +10,8 @@
 ```
 - git clone
 - git pull (untuk yg sudah clone repo ini)
-- ubah .env.example jadi .env
-- npm install -g express mysql2 nodemon dotenv
+- copy .env.example dan rename menjadi .env
+- npm install express mysql2 nodemon dotenv
 - nademon index (untuk run code)
 ```
 
@@ -38,8 +38,8 @@
 
 - Github Pages : https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-15
 - Railway APIs Main Page: https://languago.up.railway.app/
-- Railway APIs Program : https://languago.up.railway.app/api/program
-- Railway APIs Testimoni : https://languago.up.railway.app/api/testimoni
-- Railway APIs Daftar Program : https://languago.up.railway.app/api/daftar-program
-- Railway APIs Kontak Kami : https://languago.up.railway.app/api/kontak-kami
+- Railway APIs Program : https://languago.up.railway.app/api/v1/program
+- Railway APIs Testimoni : https://languago.up.railway.app/api/v1/testimoni
+- Railway APIs Daftar Program : https://languago.up.railway.app/api/v1/daftar-program
+- Railway APIs Kontak Kami : https://languago.up.railway.app/api/v1/kontak-kami
 - Railway APIs Status : https://languago.up.railway.app/status
