@@ -3,17 +3,13 @@ const bodyParser = require('body-parser');
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT;
-const programRoutes = require('./src/routes/program.js');
-const testimoniRoutes = require('./src/routes/testimoni.js');
-const daftarProgramRoutes = require('./src/routes/daftar_program.js');
-const kontakKamiRoutes = require('./src/routes/kontak_kami.js');
-const middlewareLogRequest = require('./src/middleware/logs.js');
+const programRoutes = require('./routes/programRoute.js');
+const testimoniRoutes = require('./routes/testimoniRoute.js');
+const daftarProgramRoutes = require('./routes/daftarProgramRoute.js');
+const kontakKamiRoutes = require('./routes/kontakKamiRoute.js');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
-
-//Untuk Middleware Log Request
-app.use(middlewareLogRequest);
 
 //Untuk mengizinkan request berupa json
 app.use(express.json());
@@ -23,13 +19,13 @@ app.get('/', (request, response) => {
     response.send("Hallo Selamat Datang diserver Languago");
 });
 
-app.use('/api/program', programRoutes);
+app.use('/api/v1/program', programRoutes);
 
-app.use('/api/testimoni', testimoniRoutes);
+app.use('/api/v1/testimoni', testimoniRoutes);
 
-app.use('/api/daftar-program', daftarProgramRoutes);
+app.use('/api/v1/daftar-program', daftarProgramRoutes);
 
-app.use('/api/kontak-kami', kontakKamiRoutes);
+app.use('/api/v1/kontak-kami', kontakKamiRoutes);
 
 app.get('/status', (request, response) => {
    const status = {
@@ -39,5 +35,5 @@ app.get('/status', (request, response) => {
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+    console.log(`App listening at http://localhost:${port}`);
 });
