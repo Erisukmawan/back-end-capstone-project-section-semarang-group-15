@@ -1,4 +1,4 @@
-const testimoniModel = require('../models/testimoniModel');
+const testimoniModel = require('../model/testimoniModel');
 
 const getAllTestimoni = async (req, res) => {
     try {

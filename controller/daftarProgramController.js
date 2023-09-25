@@ -1,4 +1,4 @@
-const daftarProgramModel = require('../models/daftarProgramModel');
+const daftarProgramModel = require('../model/daftarProgramModel');
 
 const getAlldaftarProgram = async (req, res) => {
     try {

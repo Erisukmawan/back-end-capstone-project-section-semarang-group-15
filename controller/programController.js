@@ -1,4 +1,4 @@
-const programModel = require('../models/programModel');
+const programModel = require('../model/programModel');
 
 const getAllProgram = async (req, res) => {
     try {

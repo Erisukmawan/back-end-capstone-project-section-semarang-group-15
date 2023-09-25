@@ -1,4 +1,4 @@
-const kontakKamiModel = require('../models/kontakKamiModel');
+const kontakKamiModel = require('../model/kontakKamiModel');
 
 const getAllkontakKami = async (req, res) => {
     try {
