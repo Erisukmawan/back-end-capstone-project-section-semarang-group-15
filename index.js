@@ -7,9 +7,17 @@ const programRoutes = require('./src/routes/program.js');
 const testimoniRoutes = require('./src/routes/testimoni.js');
 const daftarProgramRoutes = require('./src/routes/daftar_program.js');
 const kontakKamiRoutes = require('./src/routes/kontak_kami.js');
+const middlewareLogRequest = require('./src/middleware/logs.js');
 
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
+
+//Untuk Middleware Log Request
+app.use(middlewareLogRequest);
+
+//Untuk mengizinkan request berupa json
+app.use(express.json());
+
 
 app.get('/', (request, response) => {
     response.send("Hallo Selamat Datang diserver Languago");
