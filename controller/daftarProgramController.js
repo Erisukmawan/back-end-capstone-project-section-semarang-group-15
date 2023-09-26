@@ -18,7 +18,7 @@ const getAlldaftarProgram = async (req, res) => {
 const createdaftarProgram = async (req, res) => {
     const { body } = req;
 
-    if (!body.id || !body.nama || !body.email || !body.no_tel || !body.nama_program || !body.kelas || !body.date) {
+    if (!body.id || !body.nama || !body.email || !body.no_tel || !body.nama_program || !body.kelas) {
         return res.status(400).json({
             message: 'Anda mengirimkan data yang salah',
             data: null,

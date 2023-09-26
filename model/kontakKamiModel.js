@@ -5,8 +5,8 @@ const getAllkontakKami = () => {
     return connection.execute(SQLQuery);
 }
 const createkontakKami = (body) => {
-    const SQLQuery = `INSERT INTO kontak_kami (id, nama, email, isi_pesan, date) VALUES(${body.id}, '${body.nama}', '${body.email}',  '${body.isi_pesan}',  ${body.date})`;
-
+    const timestamp = new Date().toISOString().slice(0, 10);
+    const SQLQuery = `INSERT INTO kontak_kami (id, nama, email, isi_pesan, date) VALUES(${body.id}, '${body.nama}', '${body.email}',  '${body.isi_pesan}',  '${timestamp}')`;
     return connection.execute(SQLQuery);
 }
 

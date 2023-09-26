@@ -5,7 +5,8 @@ const getAlldaftarProgram = () => {
     return connection.execute(SQLQuery);
 }
 const createdaftarProgram = (body) => {
-    const SQLQuery = `INSERT INTO daftar_program (id, nama, email, no_tel, nama_program, kelas, date) VALUES(${body.id}, '${body.nama}', '${body.email}',  ${body.no_tel},  '${body.nama_program}', '${body.kelas}' ,${body.date})`;
+    const timestamp = new Date().toISOString().slice(0, 10);
+    const SQLQuery = `INSERT INTO daftar_program (id, nama, email, no_tel, nama_program, kelas, date) VALUES(${body.id}, '${body.nama}', '${body.email}',  ${body.no_tel},  '${body.nama_program}', '${body.kelas}' ,'${timestamp}')`;
 
     return connection.execute(SQLQuery);
 }

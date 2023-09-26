@@ -18,7 +18,7 @@ const getAllkontakKami = async (req, res) => {
 const createkontakKami = async (req, res) => {
     const { body } = req;
 
-    if (!body.id || !body.nama || !body.email || !body.isi_pesan || !body.date) {
+    if (!body.id || !body.nama || !body.email || !body.isi_pesan) {
         return res.status(400).json({
             message: 'Anda mengirimkan data yang salah',
             data: null,
@@ -27,7 +27,7 @@ const createkontakKami = async (req, res) => {
 
     try {
         await kontakKamiModel.createkontakKami(body);
-        res.status(200).json({
+        res.status(201).json({
             message: 'CREATE new Kontak Kami success',
             data: body
         })

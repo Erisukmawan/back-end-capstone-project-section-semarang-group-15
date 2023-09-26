@@ -3,12 +3,13 @@ const bodyParser = require('body-parser');
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT;
+
 const programRoutes = require('./route/programRoute.js');
 const testimoniRoutes = require('./route/testimoniRoute.js');
 const daftarProgramRoutes = require('./route/daftarProgramRoute.js');
 const kontakKamiRoutes = require('./route/kontakKamiRoute.js');
 
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 
 //Untuk mengizinkan request berupa json
@@ -29,6 +30,7 @@ app.use('/api/v1/kontak-kami', kontakKamiRoutes);
 
 app.get('/status', (request, response) => {
    const status = {
+       
       "Status": "Running on port " + port,
    };
     response.send(status);
