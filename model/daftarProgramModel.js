@@ -1,14 +1,31 @@
+const DataTypes = require('sequelize')
 const connection = require('../config/database');
 
-const getAlldaftarProgram = () => {
-    const SQLQuery = 'SELECT * FROM daftar_program';
-    return connection.execute(SQLQuery);
-}
-const createdaftarProgram = (body) => {
-    const timestamp = new Date().toISOString().slice(0, 10);
-    const SQLQuery = `INSERT INTO daftar_program (id, nama, email, no_tel, nama_program, kelas, date) VALUES(${body.id}, '${body.nama}', '${body.email}',  ${body.no_tel},  '${body.nama_program}', '${body.kelas}' ,'${timestamp}')`;
+const DaftarProgram = connection.define("daftar_program", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    nama: {
+        type: DataTypes.STRING,
+    },
+    email: {
+        type: DataTypes.STRING,
+    },
+    no_tel: {
+        type: DataTypes.INTEGER,
+    },
+    nama_program: {
+        type: DataTypes.STRING,
+    },
+    kelas: {
+        type: DataTypes.STRING,
+    },
+});
 
-    return connection.execute(SQLQuery);
-}
+module.exports = DaftarProgram;
 
-module.exports = { getAlldaftarProgram, createdaftarProgram };
+(async () => {
+    await connection.sync();
+})();

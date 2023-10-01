@@ -1,41 +1,20 @@
-const kontakKamiModel = require('../model/kontakKamiModel');
+const KontakKamiModel = require('../model/kontakKamiModel');
+
+const createkontakKami = async (req, res) => {
+    try {
+        await KontakKamiModel.create(req.body);
+        res.status(201).json({ Message: "Data Berhasil Dibuat" });
+    } catch (error) {
+        res.send(error.message);
+    }
+};
 
 const getAllkontakKami = async (req, res) => {
     try {
-        const [data] = await kontakKamiModel.getAllkontakKami();
-
-        res.json({
-            message: 'GET all Kontak Kami success',
-            data: data
-        })
+        const KontakKamis = await KontakKamiModel.findAll();
+        res.status(200).json(KontakKamis);
     } catch (error) {
-        res.status(500).json({
-            message: 'Server Error',
-            serverMessage: error,
-        })
+        console.log(error);
     }
-}
-const createkontakKami = async (req, res) => {
-    const { body } = req;
-
-    if (!body.id || !body.nama || !body.email || !body.isi_pesan) {
-        return res.status(400).json({
-            message: 'Anda mengirimkan data yang salah',
-            data: null,
-        })
-    }
-
-    try {
-        await kontakKamiModel.createkontakKami(body);
-        res.status(201).json({
-            message: 'CREATE new Kontak Kami success',
-            data: body
-        })
-    } catch (error) {
-        res.status(500).json({
-            message: 'Server Error',
-            serverMessage: error,
-        })
-    }
-}
-module.exports = { getAllkontakKami, createkontakKami};
+};
+module.exports = { getAllkontakKami, createkontakKami };

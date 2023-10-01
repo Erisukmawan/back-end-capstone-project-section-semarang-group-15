@@ -11,7 +11,7 @@
 - git clone
 - git pull (untuk yg sudah clone repo ini)
 - copy .env.example dan rename menjadi .env
-- npm install express mysql2 nodemon dotenv
+- npm install express mysql2 nodemon dotenv sequelize cors
 - nademon index (untuk run code)
 ```
 

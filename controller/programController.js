@@ -1,41 +1,20 @@
 const programModel = require('../model/programModel');
 
+const createProgram = async (req, res) => {
+    try {
+        await programModel.create(req.body);
+        res.status(201).json({ Message: "Data Berhasil Dibuat" });
+    } catch (error) {
+        res.send(error.message);
+    }
+};
+
 const getAllProgram = async (req, res) => {
     try {
-        const [data] = await programModel.getAllProgram();
-
-        res.json({
-            message: 'GET all Progam success',
-            data: data
-        })
+        const Programs = await programModel.findAll();
+        res.status(200).json(Programs);
     } catch (error) {
-        res.status(500).json({
-            message: 'Server Error',
-            serverMessage: error,
-        })
+        console.log(error);
     }
-}
-const createProgram = async (req, res) => {
-    const { body } = req;
-
-    if (!body.id || !body.nama_program || !body.harga_program) {
-        return res.status(400).json({
-            message: 'Anda mengirimkan data yang salah',
-            data: null,
-        })
-    }
-
-    try {
-        await programModel.createProgram(body);
-        res.status(200).json({
-            message: 'CREATE new user success',
-            data: body
-        })
-    } catch (error) {
-        res.status(500).json({
-            message: 'Server Error',
-            serverMessage: error,
-        })
-    }
-}
-module.exports = {getAllProgram, createProgram};
+};
+module.exports = { getAllProgram, createProgram };

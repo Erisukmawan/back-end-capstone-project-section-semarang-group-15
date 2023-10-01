@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 require("dotenv").config();
 const port = process.env.PORT;
+const cors = require('cors');
 
 const programRoutes = require('./route/programRoute.js');
 const testimoniRoutes = require('./route/testimoniRoute.js');
@@ -15,14 +16,7 @@ app.use(bodyParser.json())
 //Untuk mengizinkan request berupa json
 app.use(express.json());
 
-const cors = require("cors");
-const corsOptions = {
-    origin: '*',
-    credentials: true,            //access-control-allow-credentials:true
-    optionSuccessStatus: 200,
-}
-
-app.use(cors(corsOptions));
+app.use(cors());
 
 
 app.get('/', (request, response) => {

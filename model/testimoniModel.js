@@ -1,13 +1,28 @@
+const DataTypes = require('sequelize')
 const connection = require('../config/database');
 
-const getAllTestimoni = () => {
-    const SQLQuery = 'SELECT * FROM testimoni';
-    return connection.execute(SQLQuery);
-}
-const createTestimoni = (body) => {
-    const SQLQuery = `INSERT INTO testimoni (id,nama, nama_program, pesan_testimoni, foto) VALUES(${body.id}, '${body.nama}', '${body.nama_program}', '${body.pesan_testimoni}', '${body.foto}')`;
+const Testimoni = connection.define("testimoni", {
+    id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    nama: {
+        type: DataTypes.STRING,
+    },
+    nama_program: {
+        type: DataTypes.STRING,
+    },
+    pesan_testimoni: {
+        type: DataTypes.STRING,
+    },
+    foto: {
+        type: DataTypes.STRING,
+    },
+});
 
-    return connection.execute(SQLQuery);
-}
+module.exports = Testimoni;
 
-module.exports = { getAllTestimoni, createTestimoni };
+(async () => {
+    await connection.sync();
+})();
