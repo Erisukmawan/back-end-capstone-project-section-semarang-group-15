@@ -15,6 +15,15 @@ app.use(bodyParser.json())
 //Untuk mengizinkan request berupa json
 app.use(express.json());
 
+const cors = require("cors");
+const corsOptions = {
+    origin: '*',
+    credentials: true,            //access-control-allow-credentials:true
+    optionSuccessStatus: 200,
+}
+
+app.use(cors(corsOptions));
+
 
 app.get('/', (request, response) => {
     response.send("Hallo Selamat Datang diserver Languago");
