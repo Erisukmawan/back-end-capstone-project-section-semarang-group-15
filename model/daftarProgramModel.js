@@ -24,8 +24,8 @@ const DaftarProgram = connection.define("daftar_program", {
     },
 }, {
     timestamps: true, 
-    createdAt: 'created_at', 
-    updatedAt: 'updated_at', 
+    createdAt: 'createdAt', 
+    updatedAt: 'updatedAt', 
 });
 
 module.exports = DaftarProgram;
