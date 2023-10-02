@@ -16,6 +16,11 @@ const KontakKami = connection.define("kontak_kami", {
     isi_pesan: {
         type: DataTypes.STRING,
     },
+},
+{
+    timestamps: true, 
+    createdAt: 'created_at', 
+    updatedAt: 'updated_at', 
 });
 
 module.exports = KontakKami;

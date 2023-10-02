@@ -22,6 +22,10 @@ const DaftarProgram = connection.define("daftar_program", {
     kelas: {
         type: DataTypes.STRING,
     },
+}, {
+    timestamps: true, 
+    createdAt: 'created_at', 
+    updatedAt: 'updated_at', 
 });
 
 module.exports = DaftarProgram;
