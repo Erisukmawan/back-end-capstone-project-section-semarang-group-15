@@ -2,7 +2,7 @@ const DataTypes = require('sequelize')
 const connection = require('../config/database');
 
 // Defines the program table
-const Testimoni = connection.define("program", {
+const Program = connection.define("program", {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -16,7 +16,7 @@ const Testimoni = connection.define("program", {
     },
 });
 
-module.exports = Testimoni;
+module.exports = Program;
 
 // Synchronize databases
 (async () => {
