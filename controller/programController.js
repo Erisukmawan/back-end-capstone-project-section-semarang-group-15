@@ -1,5 +1,6 @@
 const programModel = require('../model/programModel');
 
+// Create program 
 const createProgram = async (req, res) => {
     try {
         await programModel.create(req.body);
@@ -9,6 +10,7 @@ const createProgram = async (req, res) => {
     }
 };
 
+// Get all program
 const getAllProgram = async (req, res) => {
     try {
         const Programs = await programModel.findAll();
@@ -17,4 +19,5 @@ const getAllProgram = async (req, res) => {
         console.log(error);
     }
 };
+
 module.exports = { getAllProgram, createProgram };

@@ -1,6 +1,7 @@
 const DataTypes = require('sequelize')
 const connection = require('../config/database');
 
+// Defines the daftar program table
 const DaftarProgram = connection.define("daftar_program", {
     id: {
         type: DataTypes.INTEGER,
@@ -14,7 +15,7 @@ const DaftarProgram = connection.define("daftar_program", {
         type: DataTypes.STRING,
     },
     no_tel: {
-        type: DataTypes.INTEGER,
+        type: DataTypes.STRING,
     },
     nama_program: {
         type: DataTypes.STRING,
@@ -22,14 +23,11 @@ const DaftarProgram = connection.define("daftar_program", {
     kelas: {
         type: DataTypes.STRING,
     },
-}, {
-    timestamps: true, 
-    createdAt: 'createdAt', 
-    updatedAt: 'updatedAt', 
 });
 
 module.exports = DaftarProgram;
 
+// Synchronize databases
 (async () => {
     await connection.sync();
 })();

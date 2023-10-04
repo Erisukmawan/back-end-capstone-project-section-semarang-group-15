@@ -1,20 +1,7 @@
-// const mysql = require('mysql2');
-// require("dotenv").config();
-
-// const connection = mysql.createPool({
-//     host: process.env.MYSQLHOST,
-//     user: process.env.MYSQLUSER,
-//     password: process.env.MYSQLPASSWORD,
-//     database: process.env.MYSQLDATABASE,
-//     port: process.env.MYSQLPORT
-// });
-
-// module.exports = connection.promise();
-
-
 require("dotenv").config();
 const Sequelize = require('sequelize');
 
+// Connection to the database
 const connection = new Sequelize(
     {
         username : process.env.MYSQLUSER,
@@ -26,6 +13,7 @@ const connection = new Sequelize(
     }
 );
 
+// Testing the connection
 connection.authenticate()
     .then(() => console.log("Database connected"))
     .catch((error) => {

@@ -1,5 +1,6 @@
 const testimoniModel = require('../model/testimoniModel');
 
+// Create testimoni 
 const createTestimoni = async (req, res) => {
     try {
         await testimoniModel.create(req.body);
@@ -9,6 +10,7 @@ const createTestimoni = async (req, res) => {
     }
 };
 
+// Get all testimoni
 const getAllTestimoni = async (req, res) => {
     try {
         const Testimonis = await testimoniModel.findAll();
@@ -17,4 +19,5 @@ const getAllTestimoni = async (req, res) => {
         console.log(error);
     }
 };
+
 module.exports = { getAllTestimoni, createTestimoni };

@@ -1,5 +1,6 @@
 const DaftarProgramModel = require('../model/daftarProgramModel');
 
+// Create daftar program 
 const createdaftarProgram = async (req, res) => {
     try {
         await DaftarProgramModel.create(req.body);
@@ -9,6 +10,7 @@ const createdaftarProgram = async (req, res) => {
     }
 };
 
+// Get all daftar program
 const getAlldaftarProgram = async (req, res) => {
     try {
         const DaftarPrograms = await DaftarProgramModel.findAll();
@@ -17,4 +19,5 @@ const getAlldaftarProgram = async (req, res) => {
         console.log(error);
     }
 };
+
 module.exports = { getAlldaftarProgram, createdaftarProgram };

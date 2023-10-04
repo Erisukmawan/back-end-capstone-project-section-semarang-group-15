@@ -1,6 +1,7 @@
 const DataTypes = require('sequelize')
 const connection = require('../config/database');
 
+// Defines the kontak kami table
 const KontakKami = connection.define("kontak_kami", {
     id: {
         type: DataTypes.INTEGER,
@@ -16,15 +17,11 @@ const KontakKami = connection.define("kontak_kami", {
     isi_pesan: {
         type: DataTypes.STRING,
     },
-},
-{
-    timestamps: true, 
-    createdAt: 'createdAt', 
-    updatedAt: 'updatedAt', 
 });
 
 module.exports = KontakKami;
 
+// Synchronize databases
 (async () => {
     await connection.sync();
 })();
