@@ -1,8 +1,6 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/yZWC7OmO)
 <p align="center"><a href="https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-15/" target="_blank"><img src="https://raw.githubusercontent.com/Kampus-Merdeka-Software-Engineering/front-end-capstone-project-section-semarang-group-15/a4e71e2d945f576febb55bb2da2e918d5f6f28c8/images/Logo.svg" width="400" alt="Logo"></a></p><hr>
 
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/0wBSnje4)
-
 <h1>Apa Itu Languago</h1>
 <p>Languago adalah platform kursus bahasa inggris yang memberikan solusi dari masalah keterbatasan akses belajar bahasa inggris. Program kursus kami sangat mudah diakses, terjangkau, dan membantu peserta kursus meningkatkan pemahaman grammar, kemampuan reading, speaking, writing bahasa inggris serta membantu persiapan tes TOEFL dan IELTS.</p>
 
