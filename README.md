@@ -38,10 +38,10 @@
 <h1>Link</h1>
 
 - Link QA test : https://docs.google.com/spreadsheets/d/1fG3M_B-l2-tfGNrApsiL6P6wARHmIqIxG-9lRWVuy44/edit?usp=sharing
-- Github Pages : https://kampus-merdeka-software-engineering.github.io/front-end-capstone-project-section-semarang-group-15
-- Railway APIs Main Page: https://languago.up.railway.app/
-- Railway APIs Program : https://languago.up.railway.app/api/v1/program
-- Railway APIs Testimoni : https://languago.up.railway.app/api/v1/testimoni
-- Railway APIs Daftar Program : https://languago.up.railway.app/api/v1/daftar-program
-- Railway APIs Kontak Kami : https://languago.up.railway.app/api/v1/kontak-kami
-- Railway APIs Status : https://languago.up.railway.app/status
+- Our Website : https://languago.up.railway.app/
+- Railway APIs Main Page: https://be-semarang-15-production.up.railway.app/
+- Railway APIs Program : https://be-semarang-15-production.up.railway.app/api/v1/program
+- Railway APIs Testimoni : https://be-semarang-15-production.up.railway.app/api/v1/testimoni
+- Railway APIs Daftar Program : https://be-semarang-15-production.up.railway.app/api/v1/daftar-program
+- Railway APIs Kontak Kami : https://be-semarang-15-production.up.railway.app/api/v1/kontak-kami
+- Railway APIs Status : https://be-semarang-15-production.up.railway.app/status
